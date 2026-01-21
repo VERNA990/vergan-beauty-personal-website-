@@ -36,6 +36,11 @@ body {
   display: contents;
   font-size: 1.2em;
 }
+.navbar nav img {
+  border-radius: 50%;
+  width: 5em;
+  height: 4em;
+}
 .navbar nav ul.primary-nav {
   position: relative;
 }
@@ -347,6 +352,7 @@ h2 {
   width: 100%;
   max-width: 900px;
   background: white;
+  box-shadow: #00ffff;
 }
 .book-appointment .appointment-form input, .book-appointment .appointment-form textarea, .book-appointment .appointment-form select {
   width: 100%;
