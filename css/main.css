@@ -494,9 +494,6 @@ h2 {
   font-size: 1.2em;
   padding: 1.5em 3em;
   display: inline-block;
-}
-
-.custom-design-cta .primary-btn a {
   color: white;
   font-weight: bold;
 }
@@ -641,7 +638,7 @@ h2 {
   padding: 0.8em 1.5em;
   cursor: pointer;
   background: var(--primary-color);
-  color: white;
+  color: white !important;
   border-radius: 0.5em;
   transition: background 0.3s ease;
   margin-bottom: 0.5em;
@@ -652,6 +649,7 @@ h2 {
 .custom-file-upload:hover {
   background: var(--hover-background);
   transform: translateY(-2px);
+  color: white !important;
 }
 
 input[type="file"] {

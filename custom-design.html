@@ -15,7 +15,7 @@
 
   <body>
     <header>
-      <!--Navigation bar section of website-->
+      
       <section class="navbar">
         <h1><a class="logo" href="index.html">Vergan<span>Beauty</span></a></h1>
         <nav>
@@ -29,7 +29,7 @@
           </ul>
 
           <ul class="secondary-nav">
-            <li><a href="#">🛒</a></li>
+            <li><a href="#"></a></li>
             <li>
               <a class="profile" href="#"
                 ><img
@@ -107,20 +107,23 @@
               </div>
 
               <div class="form-element">
-                <label for="color-preference">Color Preferences</label>
-                <input type="text" name="color_preference" id="color-preference" placeholder="Preferred colors or color scheme">
+                <label for="clothing-size">Clothing Size (if applicable)</label>
+                <select id="clothing-size" name="clothing_size">
+                  <option value="">Select size (optional)</option>
+                  <option value="XS">XS - Extra Small</option>
+                  <option value="S">S - Small</option>
+                  <option value="M">M - Medium</option>
+                  <option value="L">L - Large</option>
+                  <option value="XL">XL - Extra Large</option>
+                  <option value="XXL">XXL - Double Extra Large</option>
+                  <option value="XXXL">XXXL - Triple Extra Large</option>
+                  <option value="custom">Custom Size (specify in size information above)</option>
+                </select>
               </div>
 
               <div class="form-element">
-                <label for="budget">Budget Range</label>
-                <select id="budget" name="budget_range">
-                  <option value="">Select budget range (optional)</option>
-                  <option value="under-50">Under $50</option>
-                  <option value="50-100">$50 - $100</option>
-                  <option value="100-200">$100 - $200</option>
-                  <option value="200-plus">$200+</option>
-                  <option value="discuss">Let's discuss</option>
-                </select>
+                <label for="color-preference">Color Preferences</label>
+                <input type="text" name="color_preference" id="color-preference" placeholder="Preferred colors or color scheme">
               </div>
 
               <div class="form-element">
@@ -135,7 +138,7 @@
               </div>
             </div>
 
-            <!-- Design Inspiration -->
+            
             <div class="form-section">
               <h3 class="section-title">Design Inspiration</h3>
               <p class="field-note">Please provide at least one of the following: description, images, or videos</p>
@@ -163,7 +166,7 @@
               </div>
             </div>
 
-            <!-- Additional Information -->
+            
             <div class="form-section">
               <h3 class="section-title">Additional Information</h3>
               
@@ -193,9 +196,9 @@
     </main>
 
     <footer>
-      <!--contact section-->
+      
       <div class="socials" id="contact">
-        <div class="back-to-top"><a href="#">⬆️</a></div>
+        <div class="back-to-top"><a href="#"></a></div>
         <div class="contact-info">
           <h3 class="logo">Vergan <span>Beauty</span></h3>
           <p>Where artisan craftsmanship meets modern beauty. Creating beautiful braids and handcrafted crochet pieces since 2022</p>
@@ -239,7 +242,7 @@
         </div>
       </div>
 
-      <!--copyright section-->
+      
       <hr>
       <p class="copyright">
         &copy; 2026 VerganBeauty. All rights reserved. Crafted with ❤️
@@ -278,17 +281,17 @@
           }
         }
 
-        // Add event listeners to inspiration fields
+        
         description.addEventListener('input', updateSubmitButton);
         inspirationImages.addEventListener('change', updateSubmitButton);
         inspirationVideos.addEventListener('change', updateSubmitButton);
         referenceLinks.addEventListener('input', updateSubmitButton);
 
-        // Initial check
+        
         updateSubmitButton();
 
-        // Form submission
-        form.addEventListener('submit', function(e) {
+        
+        form.addEventListener('submit', function(e) { //to submit the form
           if (!validateInspiration()) {
             e.preventDefault();
             alert('Please provide at least one of the following: description, images, videos, or reference links for your design inspiration.');
