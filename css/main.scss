@@ -315,8 +315,8 @@ h2 {
 
 
 
-    p{
-        margin:0 0 2em 0 ;
+    .shop-memo{
+        margin:0 0 2.5em 0 ;
         font-family: cursive;
         font-size: 20px;
         
@@ -326,6 +326,7 @@ h2 {
         display: flex;
         flex-flow: row wrap;
         justify-content: center;
+        overflow: scroll;
 
         .product-card {
             display: flex;
@@ -333,13 +334,13 @@ h2 {
             border: var(--thin-border);
             position: relative;
             width: 385px;
-            height: 700px;
-            margin: 1em;
-            padding: 2em;
+            margin: 20px;
+            padding: 30px;
             border-radius: 2em;
             background: white;
             overflow: hidden;
             cursor: pointer;
+
             .product-img {
                 margin: -2em -2em 1.2em -2em;
             img {
@@ -353,8 +354,80 @@ h2 {
 
            
         } 
+
+        .product-info {
+            display: flex;
+            flex-direction: column;
+            flex-grow: 1;
+            margin-bottom: 15px;
+
+            p{
+        font-family: 'Times New Roman', Times, serif;
+        font-size: 22px;
+        text-align: left;
+        }
+        }
+
+        .product-footer {
+            display: flex;
+            flex-direction: column;
+            white-space: unset;
+            overflow: unset;
+            gap: 10px;
+            padding: 0.5em 0.1em;
+        }
+            
+            .product-rating-container {
+            display: inline-flex;
+            align-items: center;
+            gap: 0.5em;
+
+            .product-rating-stars {
+                width: 120px;
+                height: auto;
+                margin-right: 0.5em;
+            }
+
+            .product-rating-count {
+                font-size: 16px;
+                color: var(--primary-color);
+            }
+        }
+        
+        .product-price {
+            display: inline-flex;
+            font-size: 24px;
+            font-weight: bold;
+            margin-top: 0.2em;
+            justify-content: space-between;
+
+            .increment {
+                display: flex;
+                height: 30px;
+                
+                input {
+                width: 35px;
+                font-size: 1em;
+                text-align: center;
+                border-radius: .3em 0 0 .3em;
+                border-right: none;
+            }
+            
+            button {
+                    all: unset;
+                    padding: 0 0.2em;
+                    font-size: 1em;
+                    background: var(--primary-color);
+                    color: white;
+                    border: none;
+                    cursor: pointer;
+
+                }
+            }
+            
+        }
+        
         .product-link {
-             margin-top: auto;
                .primary-btn {
                     width: 100%;
                     white-space: nowrap;
@@ -364,13 +437,7 @@ h2 {
             }
 
 
-    p{
-        margin:0 0 2em 0 ;
-        font-family: 'Times New Roman', Times, serif;
-        font-size: 21px;
-        text-align: left;
-
-        }
+    
 
         &::before {
   content: '';
