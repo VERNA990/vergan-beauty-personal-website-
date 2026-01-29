@@ -1,0 +1,304 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" >
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" >
+    <meta name="author" content="Fonyuy Verena" >
+    <meta
+      name="description"
+      content="Request a custom crochet design - personalized clothing and accessories made just for you"
+    >
+    <title>Custom Design Request - Vergan Beauty</title>
+    <link rel="stylesheet" href="css/main.css" >
+    <link rel="icon" href="assets/icon/verganBeauty-icon.png">
+  </head>
+
+  <body>
+    <header>
+      
+      <section class="navbar">
+        <h1><a class="logo" href="index.html">Vergan<span>Beauty</span></a></h1>
+        <nav>
+          <ul class="primary-nav">
+            <li><a href="index.html">Home</a></li>
+            <li><a href="index.html#services">Services</a></li>
+            <li><a href="index.html#book-appointment">Book now</a></li>
+            <li><a href="index.html#shop">Shop</a></li>
+            <li><a href="index.html#contact">contact</a></li>
+            <li><a href="#">About Me</a></li>
+          </ul>
+
+          <ul class="secondary-nav">
+            <li><a href="#"></a></li>
+            <li>
+              <a class="profile" href="#"
+                ><img
+                  src="assets/french_curls/dwayne-joe-iJmMxExrGEQ-unsplash.jpg"
+                  alt="profile"
+                  loading="lazy"
+                  title="profile"
+              ></a>
+            </li>
+          </ul>
+        </nav>
+      </section>
+    </header>
+
+    <main>
+      <!--Custom Design Request Form-->
+      <section class="custom-design-form-section">
+        <div class="form-header">
+          <h1>Custom Design Request</h1>
+          <p>Let's bring your vision to life! Fill out the form below to request your personalized crochet piece.</p>
+        </div>
+
+        <div class="custom-design-form">
+          <form method="post" enctype="multipart/form-data" id="customDesignForm">
+            
+            <!-- Personal Information -->
+            <div class="form-section">
+              <h3 class="section-title">Personal Information</h3>
+              
+              <div class="form-element">
+                <label for="fullname">Full Name *</label>
+                <input type="text" name="fullname" id="fullname" placeholder="Enter your full name" required autocomplete="on">
+              </div>
+
+              <div class="form-element">
+                <label for="phone">Phone Number *</label>
+                <input type="tel" name="phone" id="phone" placeholder="Your contact number" required>
+              </div>
+
+              <div class="form-element">
+                <label for="email">Email Address *</label>
+                <input type="email" name="email" id="email" placeholder="your.email@example.com" required>
+              </div>
+
+              <div class="form-element">
+                <label for="town">Town/City *</label>
+                <input type="text" name="town" id="town" placeholder="Your location" required>
+              </div>
+
+              <div class="form-element">
+                <label for="address">Full Address</label>
+                <textarea name="address" id="address" rows="3" placeholder="Complete address for delivery (optional)"></textarea>
+              </div>
+            </div>
+
+            <!-- Design Details -->
+            <div class="form-section">
+              <h3 class="section-title">Design Details</h3>
+              
+              <div class="form-element">
+                <label for="item-type">Type of Item *</label>
+                <select id="item-type" name="item_type" required>
+                  <option value="">Select item type</option>
+                  <option value="clothing">Clothing (tops, dresses, cardigans)</option>
+                  <option value="accessories">Accessories (bags, hats, scarves)</option>
+                  <option value="home-decor">Home Decor (blankets, cushions)</option>
+                  <option value="baby-items">Baby Items (clothes, toys, blankets)</option>
+                  <option value="other">Other (please specify in description)</option>
+                </select>
+              </div>
+
+              <div class="form-element">
+                <label for="size-info">Size Information</label>
+                <textarea name="size_info" id="size-info" rows="3" placeholder="Please provide measurements, clothing size, or dimensions needed"></textarea>
+              </div>
+
+              <div class="form-element">
+                <label for="clothing-size">Clothing Size (if applicable)</label>
+                <select id="clothing-size" name="clothing_size">
+                  <option value="">Select size (optional)</option>
+                  <option value="XS">XS - Extra Small</option>
+                  <option value="S">S - Small</option>
+                  <option value="M">M - Medium</option>
+                  <option value="L">L - Large</option>
+                  <option value="XL">XL - Extra Large</option>
+                  <option value="XXL">XXL - Double Extra Large</option>
+                  <option value="XXXL">XXXL - Triple Extra Large</option>
+                  <option value="custom">Custom Size (specify in size information above)</option>
+                </select>
+              </div>
+
+              <div class="form-element">
+                <label for="color-preference">Color Preferences</label>
+                <input type="text" name="color_preference" id="color-preference" placeholder="Preferred colors or color scheme">
+              </div>
+
+              <div class="form-element">
+                <label for="timeline">When do you need this?</label>
+                <select id="timeline" name="timeline">
+                  <option value="">Select timeline (optional)</option>
+                  <option value="rush">Rush (1-2 weeks) - additional fee may apply</option>
+                  <option value="standard">Standard (3-4 weeks)</option>
+                  <option value="flexible">Flexible (1-2 months)</option>
+                  <option value="no-rush">No rush - whenever convenient</option>
+                </select>
+              </div>
+            </div>
+
+            
+            <div class="form-section">
+              <h3 class="section-title">Design Inspiration</h3>
+              <p class="field-note">Please provide at least one of the following: description, images, or videos</p>
+              
+              <div class="form-element">
+                <label for="description">Description of Your Vision</label>
+                <textarea name="description" id="description" rows="5" placeholder="Describe what you have in mind - style, details, inspiration, specific features you want..."></textarea>
+              </div>
+
+              <div class="form-element">
+                <label for="inspiration-images" class="custom-file-upload">Upload Inspiration Images</label>
+                <input id="inspiration-images" type="file" name="inspiration_images[]" multiple accept="image/*">
+                <small>You can select multiple images (JPG, PNG, GIF)</small>
+              </div>
+
+              <div class="form-element">
+                <label for="inspiration-videos" class="custom-file-upload">Upload Inspiration Videos</label>
+                <input id="inspiration-videos" type="file" name="inspiration_videos[]" multiple accept="video/*">
+                <small>You can select multiple videos (MP4, MOV, AVI)</small>
+              </div>
+
+              <div class="form-element">
+                <label for="reference-links">Reference Links</label>
+                <textarea name="reference_links" id="reference-links" rows="3" placeholder="Any Pinterest, Instagram, or other links to designs you like"></textarea>
+              </div>
+            </div>
+
+            
+            <div class="form-section">
+              <h3 class="section-title">Additional Information</h3>
+              
+              <div class="form-element">
+                <label for="special-requests">Special Requests or Notes</label>
+                <textarea name="special_requests" id="special-requests" rows="4" placeholder="Any special requirements, allergies to materials, preferred yarn types, or other important details"></textarea>
+              </div>
+
+              <div class="form-element checkbox-group">
+                <input type="checkbox" id="newsletter" name="newsletter" value="yes">
+                <label for="newsletter">I'd like to receive updates about new designs and promotions</label>
+              </div>
+
+              <div class="form-element checkbox-group">
+                <input type="checkbox" id="terms" name="terms" value="yes" required>
+                <label for="terms">I understand that custom orders require a deposit and have longer processing times *</label>
+              </div>
+            </div>
+
+            <div class="form-submit">
+              <button type="submit" class="primary-btn" id="submitBtn" disabled>Submit Custom Design Request</button>
+              <p class="submit-note">We'll review your request and get back to you within 24-48 hours with a quote and timeline.</p>
+            </div>
+          </form>
+        </div>
+      </section>
+    </main>
+
+    <footer>
+      
+      <div class="socials" id="contact">
+        <div class="back-to-top"><a href="#"></a></div>
+        <div class="contact-info">
+          <h3 class="logo">Vergan <span>Beauty</span></h3>
+          <p>Where artisan craftsmanship meets modern beauty. Creating beautiful braids and handcrafted crochet pieces since 2022</p>
+        </div>
+
+        <div class="contact-info">
+          <h3>Quick Links</h3>
+          <ul>
+            <li><a href="index.html#services">Services</a></li>
+            <li><a href="#">Pricing</a></li>
+            <li><a href="index.html#book-appointment">Book Appointment</a></li>
+            <li><a href="index.html#shop">Shop</a></li>
+            <li><a href="#">Gallery</a></li>
+          </ul>
+        </div>
+
+        <div class="contact-info">
+          <h3>Social Media</h3>
+          <p>please follow my social media platforms for more recent, juicy content</p>
+          <ul>
+            <li><a data-platform="facebook" href="https://www.facebook.com/share/18QW5bgV4o/" target="_blank" rel="noopener noreferrer nofollow" aria-label="visit my facebook page"><img src="assets/social_media/Facebook_Logo_Primary.png" alt="facebook page" loading="lazy">Facebook</a></li>
+            <li><a data-platform="instagram" href="https://www.instagram.com/fonyuyverena?utm_source=qr&igsh=Z29mYmhpZm01cWh0" target="_blank" rel="noopener noreferrer nofollow"  aria-label="visit my instagram page"><img src="assets/social_media/Instagram_Glyph_Gradient.png" alt="instagram page" loading="lazy">Instagram</a></li>
+            <li><a data-platform="tiktok" href="https://www.tiktok.com/@_verna202?_r=1&_t=ZS-93FclqQc21U" target="_blank" rel="noopener noreferrer nofollow"  aria-label="visit my tiktok page"><img src="assets/social_media/TikTok_Icon_Black_Circle.png" alt="tiktok page">Tiktok</a></li>
+            <li><a data-platform="whatsapp" href="https://wa.me/237675915416" target="_blank" rel="noopener noreferrer nofollow" aria-label="chat with me on whatsapp for any inquiries"><img src="assets/social_media/Digital_Glyph_Green.svg" alt="whatsapp contact" >whatsapp</a></li>
+            <li><a data-platform="YouTube" href="https://youtube.com/@fonyuyverenam?si=rm1j22DGaqlNVA0t" target="_blank" rel="noopener noreferrer nofollow" aria-label="visit my youtube channel"><img src="assets/social_media/yt_icon_red_digital.png" alt="youtube channel" >YouTube</a></li>
+          </ul>
+
+          <address>
+            <ul>
+              <li>Tarred Malingo, Buea Cameroon</li>
+            </ul>
+          </address>
+        </div>
+
+        <div class="contact-info">
+          <h3>Hours</h3>
+          <dl>
+            <dt>Sunday and Monday: </dt>
+            <dd>By Appointment</dd>
+          </dl>
+        </div>
+      </div>
+
+      
+      <hr>
+      <p class="copyright">
+        &copy; 2026 VerganBeauty. All rights reserved. Crafted with ❤️
+      </p>
+    </footer>
+
+    <script>
+      // Form validation script
+      document.addEventListener('DOMContentLoaded', function() {
+        const form = document.getElementById('customDesignForm');
+        const submitBtn = document.getElementById('submitBtn');
+        const description = document.getElementById('description');
+        const inspirationImages = document.getElementById('inspiration-images');
+        const inspirationVideos = document.getElementById('inspiration-videos');
+        const referenceLinks = document.getElementById('reference-links');
+
+        function validateInspiration() {
+          const hasDescription = description.value.trim().length > 0;
+          const hasImages = inspirationImages.files.length > 0;
+          const hasVideos = inspirationVideos.files.length > 0;
+          const hasLinks = referenceLinks.value.trim().length > 0;
+          
+          return hasDescription || hasImages || hasVideos || hasLinks;
+        }
+
+        function updateSubmitButton() {
+          const isValid = validateInspiration();
+          submitBtn.disabled = !isValid;
+          
+          if (isValid) {
+            submitBtn.style.opacity = '1';
+            submitBtn.style.cursor = 'pointer';
+          } else {
+            submitBtn.style.opacity = '0.6';
+            submitBtn.style.cursor = 'not-allowed';
+          }
+        }
+
+        
+        description.addEventListener('input', updateSubmitButton);
+        inspirationImages.addEventListener('change', updateSubmitButton);
+        inspirationVideos.addEventListener('change', updateSubmitButton);
+        referenceLinks.addEventListener('input', updateSubmitButton);
+
+        
+        updateSubmitButton();
+
+        
+        form.addEventListener('submit', function(e) { //to submit the form
+          if (!validateInspiration()) {
+            e.preventDefault();
+            alert('Please provide at least one of the following: description, images, videos, or reference links for your design inspiration.');
+            return false;
+          }
+        });
+      });
+    </script>
+  </body>
+</html>

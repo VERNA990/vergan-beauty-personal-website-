@@ -520,6 +520,292 @@ h2 {
     padding: 2em 0;
 }
 
+/* Custom Design Panel Styles */
+.custom-design-panel {
+    background: linear-gradient(135deg, rgba(128, 0, 128, 0.1), rgba(255, 228, 181, 0.3));
+    padding: 8em 2em;
+    text-align: center;
+    border-top: var(--thin-border);
+}
+
+.custom-design-content {
+    h2 {
+        color: var(--primary-color);
+        margin-bottom: 1em;
+    }
+
+    > p {
+        font-size: 1.3em;
+        font-family: cursive;
+        margin-bottom: 3em;
+        color: #333;
+    }
+}
+
+.custom-design-features {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 2em;
+    margin: 3em 0;
+
+    .feature {
+        background: white;
+        border: var(--thin-border);
+        border-radius: 1.5em;
+        padding: 2em;
+        width: 300px;
+        box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+        transition: transform 0.3s ease, box-shadow 0.3s ease;
+
+        &:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 8px 25px rgba(128, 0, 128, 0.2);
+        }
+
+        h3 {
+            font-size: 1.5em;
+            margin-bottom: 1em;
+            color: var(--primary-color);
+        }
+
+        p {
+            font-size: 1.1em;
+            color: #666;
+            margin: 0;
+        }
+    }
+}
+
+.custom-design-cta {
+    margin-top: 3em;
+
+    .primary-btn {
+        font-size: 1.2em;
+        padding: 1.5em 3em;
+        display: inline-block;
+        color: white;
+        font-weight: bold;
+    }
+}
+
+/* Custom Design Form Styles */
+.custom-design-form-section {
+    background: var(--primary-background-color);
+    padding-top: 8em;
+    padding-bottom: 4em;
+    min-height: 100vh;
+}
+
+.form-header {
+    text-align: center;
+    margin-bottom: 3em;
+    padding: 0 2em;
+
+    h1 {
+        font-family: var(--heading-font-family);
+        font-size: 3em;
+        color: var(--primary-color);
+        margin-bottom: 0.5em;
+    }
+
+    p {
+        font-size: 1.3em;
+        font-family: cursive;
+        color: #333;
+        max-width: 600px;
+        margin: 0 auto;
+    }
+}
+
+.custom-design-form {
+    max-width: 900px;
+    margin: 0 auto;
+    padding: 0 2em;
+}
+
+.form-section {
+    background: white;
+    border: var(--thin-border);
+    border-radius: 1.5em;
+    padding: 2.5em;
+    margin-bottom: 2em;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+    text-align: left;
+    position: relative;
+
+    .section-title {
+        font-size: 1.5em;
+        font-weight: bold;
+        color: var(--primary-color);
+        margin-bottom: 1.5em;
+        padding-bottom: 0.5em;
+        border-bottom: 2px solid rgba(128, 0, 128, 0.2);
+        text-align: left;
+    }
+
+    legend {
+        font-size: 1.5em;
+        font-weight: bold;
+        color: var(--primary-color);
+        padding: 0.5em 1em;
+        margin-bottom: 1.5em;
+        background: white;
+        border: var(--thin-border);
+        border-radius: 0.8em;
+        position: relative;
+        left: 0;
+        width: auto;
+        max-width: 100%;
+    }
+
+    input, textarea, select {
+        width: 100%;
+        border-radius: 0.5em;
+        padding: 1em;
+        font-size: 1em;
+        border: 1px solid #ccc;
+        font-family: 'Times New Roman', Times, serif;
+
+        &:hover {
+            border: 2px solid var(--hover-background);
+            font-weight: bold;
+        }
+
+        &:focus {
+            outline: none;
+            border: 2px solid var(--primary-color);
+            box-shadow: 0 0 5px rgba(128, 0, 128, 0.3);
+        }
+    }
+
+    .form-element {
+        margin-bottom: 2em;
+    }
+
+    label {
+        display: block;
+        margin-bottom: 0.5em;
+        font-weight: bold;
+        color: #333;
+    }
+}
+
+.field-note {
+    background: rgba(128, 0, 128, 0.1);
+    padding: 1em;
+    border-radius: 0.5em;
+    margin-bottom: 1.5em;
+    font-style: italic;
+    color: #666;
+}
+
+.checkbox-group {
+    display: flex;
+    align-items: flex-start;
+    gap: 0.5em;
+
+    input[type="checkbox"] {
+        width: auto !important;
+        margin-top: 0.2em;
+        flex-shrink: 0;
+    }
+
+    label {
+        flex: 1;
+        margin-bottom: 0 !important;
+        font-weight: normal;
+    }
+}
+
+.custom-file-upload {
+    display: inline-block;
+    padding: 0.8em 1.5em;
+    cursor: pointer;
+    background: var(--primary-color);
+    color: white !important;
+    border-radius: 0.5em;
+    transition: background 0.3s ease;
+    margin-bottom: 0.5em;
+    font-weight: bold;
+    border: none;
+
+    &:hover {
+        background: var(--hover-background);
+        transform: translateY(-2px);
+        color: white !important;
+    }
+}
+
+input[type="file"] {
+    display: none;
+}
+
+.form-element {
+    small {
+        display: block;
+        color: #666;
+        font-size: 0.9em;
+        margin-top: 0.5em;
+        font-style: italic;
+    }
+}
+
+.form-submit {
+    text-align: center;
+    padding: 2em;
+    background: white;
+    border-radius: 1.5em;
+    border: var(--thin-border);
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+
+    .primary-btn {
+        font-size: 1.2em;
+        padding: 1.2em 3em;
+        transition: opacity 0.3s ease, transform 0.2s ease;
+        border: none;
+        cursor: pointer;
+        font-family: 'Times New Roman', Times, serif;
+
+        &:disabled {
+            opacity: 0.6;
+            cursor: not-allowed;
+            transform: none;
+        }
+
+        &:not(:disabled):hover {
+            transform: translateY(-2px);
+        }
+    }
+}
+
+.submit-note {
+    margin-top: 1em;
+    color: #666;
+    font-style: italic;
+}
+
+/* Responsive Design for Custom Design Features */
+@media (max-width: 768px) {
+    .custom-design-features {
+        flex-direction: column;
+        align-items: center;
+
+        .feature {
+            width: 100%;
+            max-width: 400px;
+        }
+    }
+
+    .form-section {
+        padding: 1.5em;
+    }
+
+    .form-header h1 {
+        font-size: 2.2em;
+    }
+}
+
 
 
 @media (max-width: 900px) {
