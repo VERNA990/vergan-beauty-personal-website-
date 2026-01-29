@@ -31,7 +31,6 @@ services.forEach(service => {
     `;
 })
 
-console.log(servicesHTML)
 document.querySelector('.js-service-collection').innerHTML = servicesHTML;
 
 const products = [{
@@ -116,7 +115,7 @@ products.forEach(product => {
         </div>
           <div class="product-link">
           <ul>
-            <li class="primary-btn"><a href="#" >Add to Cart</a></li>
+            <li class="primary-btn js-add-to-cart" data-product-name="${product.name}">Add to Cart</li>
           </ul>
           </div>
         </div>
@@ -124,5 +123,37 @@ products.forEach(product => {
     `;
 })
 
-console.log(productsHTML)
 document.querySelector('.js-shop-collection').innerHTML = productsHTML;
+
+document.querySelectorAll('.js-add-to-cart')
+.forEach(button => {
+    button.addEventListener('click', () => {
+        const productName = button.dataset.productName
+
+        let matchingItem;
+        cart.forEach(item => {
+            if(productName === item.productName){
+                matchingItem = item
+            }
+        });
+
+        if (matchingItem) {
+            matchingItem.quantity += 1;
+        } else {
+            cart.push({
+                productName: productName,
+                quantity: 1
+            });
+        }
+
+        let cartQuantity = 0;
+
+        cart.forEach(item => {
+            cartQuantity += item.quantity;
+        });
+
+        document.querySelector('.js-cart-quantity').innerHTML = cartQuantity;
+         console.log(cartQuantity)
+    console.log(cart);
+      });
+});

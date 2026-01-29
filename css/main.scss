@@ -38,10 +38,13 @@ body {
         display: contents;
         font-size: 1.2em;
 
+        .profile {
+            all: unset;
+        }
         img{
             border-radius: 50%;
-            width: 5em;
-            height: 4em;
+            width: 50px;
+            height: 40px;
         }
 
         ul.primary-nav {
@@ -70,11 +73,35 @@ body {
             font-weight: bold;
         }
             }
+            
+                .cart {
+                    all: unset;
+                    
+        }
 
+        .cart a{
+            font-size: 40px;
+            opacity: 0.4;
+        }
+
+        .quantity{
+            all: unset;
+            font-size: 25px;
+            font-weight: bold;
+            color: darkred;
+            top: 12px;
+            right: 100px;           
+            position: fixed;
+            z-index: 1;
+        }
+                
+            
+        
    }
       a{
         color: black;
       } 
+
 
 }
 
@@ -432,6 +459,8 @@ h2 {
                     width: 100%;
                     white-space: nowrap;
                     padding: 1.2em;
+                    color: white;
+                    font-weight: bold;
                 }
                 
             }
