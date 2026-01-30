@@ -49,7 +49,7 @@ products.forEach(product => {
         </div>
           <div class="product-link">
           <ul>
-            <li class="primary-btn js-add-to-cart" data-product-name="${product.name}">Add to Cart</li>
+            <li class="primary-btn js-add-to-cart" data-product-id="${product.id}">Add to Cart</li>
           </ul>
           </div>
         </div>
@@ -76,9 +76,9 @@ function updateCartQuantity () {
 document.querySelectorAll('.js-add-to-cart')
 .forEach(button => {
     button.addEventListener('click', () => {
-        const productName = button.dataset.productName
+        const productId = button.dataset.productId
 
-        addToCart(productName);
+        addToCart(productId);
 
         updateCartQuantity();
 
