@@ -1,3 +1,4 @@
+import {cart} from '../data/cart.js';
 
 const services = [{
     image: 'assets/hero_images/mohamed-b-O1W2ZYGxFPA-unsplash.jpg',
