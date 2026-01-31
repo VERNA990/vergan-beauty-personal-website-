@@ -140,6 +140,9 @@ a {
     position: relative;
 
      .hero-img {
+        position: relative;
+        overflow: hidden;
+
         img {
         width: 100vw;
         height: 100dvh;
@@ -149,6 +152,8 @@ a {
     }}
 
      .hero-slide{
+        position: absolute;
+        inset: 0;
         display: none;
     }
 
