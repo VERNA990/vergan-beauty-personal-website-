@@ -1,18 +1,48 @@
 import {cart, addToCart} from '../data/cart.js';
 import { products } from '../data/products.js';
 import { services } from '../data/services.js';
+import { slides } from '../data/heroSlide.js';
 
 let servicesHTML = ''
+let heroSliderHTML = '';
+let index = 0;
+
+slides.forEach(slide => {
+  heroSliderHTML += `
+    <img class="js-hero-slide hero-slide ${index ===0 ? 'active' : ''}"
+         src="assets/hero_images/${slide}"
+         alt="hero image"
+         loading="lazy">
+  `;
+});
+
+const sliderContainer = document.querySelector('.js-hero-slider');
+sliderContainer.innerHTML = heroSliderHTML;
+
+const slideImages = document.querySelectorAll('.js-hero-slide');
+
+function runHeroSlider() {
+  slideImages[index].classList.remove('active');
+  index = (index + 1) % slideImages.length;
+  slideImages[index].classList.add('active');
+  setTimeout(runHeroSlider, 5000);
+}
+
+runHeroSlider();
 
 services.forEach(service => {
     servicesHTML += `
    <div class="service-card">
           <img src="${service.image}" alt="profesional braiding" loading="lazy">
+          <div class="service-info">
           <h3>${service.name}</h3>
-          <p>${service.description}</p>
+          <p class="service-description">${service.description}</p>
+          </div>
+          <div class="service-footer">
           <ul>
-            <li class="primary-btn"><a href="#" >Pricing System</a></li>
+            <li class="primary-btn"><a href="${service.buttonLink}" >${service.buttonLabel}</a></li>
           </ul>
+          </div>
         </div>
     `;
 })
